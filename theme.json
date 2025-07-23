@@ -5,7 +5,7 @@
     "homepage": "https://github.com/StormAnon/zen-auto-expand-sidebar",
     "style": "https://raw.githubusercontent.com/StormAnon/zen-auto-expand-sidebar/main/chrome.css",
     "readme": "https://raw.githubusercontent.com/StormAnon/zen-auto-expand-sidebar/main/README.md",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/StormAnon/zen-auto-expand-sidebar/testing2/image.png",
     "author": "StormAnon",
     "version": "1.0.0",
     "fork": ["Zen"],
