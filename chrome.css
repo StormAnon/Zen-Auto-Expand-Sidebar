@@ -1,3 +1,9 @@
+body:has(#zen-auto-expand-sidebar[mod-autoexpand-performance-mode="potato"]) {
+  #zen-media-focus-button{
+    transform: scaleY(2) !important;
+  }
+}
+
 @media (-moz-bool-pref: "mod.autoexpand.visible_scroll") {
   scrollbox {
     width: var(--my-width) !important;

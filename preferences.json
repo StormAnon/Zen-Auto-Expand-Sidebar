@@ -40,5 +40,20 @@
         "label": "Make the selected essential tab be placed in the first position, visible when collapsed",
         "type": "checkbox",
         "defaultValue": false
-    }
+    },
+    {
+    "property": "mod.autoexpand.performance-mode",
+    "label": "Performance Setting",
+    "type": "dropdown",
+    "options": [
+      {
+        "label": "Balanced",
+        "value": "balanced"
+      },
+      {
+        "label": "Potato",
+        "value": "potato"
+      }
+    ]
+  }
 ]
