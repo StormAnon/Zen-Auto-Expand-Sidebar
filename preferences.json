@@ -42,7 +42,7 @@
         "defaultValue": false
     },
     {
-    "property": "mod.autoexpand.performance-mode",
+    "property": "mod-autoexpand-performance-mode",
     "label": "Performance Setting",
     "type": "dropdown",
     "options": [

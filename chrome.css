@@ -1,4 +1,4 @@
-body:has(#zen-auto-expand-sidebar[mod-autoexpand-performance-mode="potato"]) {
+:root:has(#theme-zen-auto-expand-sidebar[mod-autoexpand-performance-mode="potato"]) {
   #zen-media-focus-button{
     transform: scaleY(2) !important;
   }
