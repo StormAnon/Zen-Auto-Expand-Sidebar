@@ -1,27 +1,23 @@
-@media (-moz-bool-pref: "mod.autoexpand.visible_scroll") {
-  scrollbox {
-    width: var(--my-width) !important;
-    transition: width 0ms ease-in-out calc(var(--transition-duration) + 200ms);
-  }
+scrollbox {
+  width: var(--my-width) !important;
+  transition: width 0ms ease-in-out calc(var(--transition-duration) + var(--transition-delay-after) + 200ms);
+}
 
-  scrollbox:hover {
-    width: var(--my-width) !important;
-    transition: width 0ms ease-in-out var(--transition-delay);
-  }
+scrollbox:hover {
+  width: var(--my-width) !important;
+  transition: width 0ms ease-in-out var(--transition-delay);
 }
 
 :root:not([sizemode="fullscreen"]){
-  --transition-duration: var(--mod-autoexpand-animation_duration);
-  --transition-delay: var(--mod-autoexpand-animation_delay);
+  --transition-duration: 150ms;
+  --transition-delay: 0ms;
   --transition-delay-after: 100ms;
-  --expanded-tab-bar-width: var(--mod-autoexpand-expanded_width);
-  --collapsed-tab-bar-width: var(--mod-autoexpand-collapsed_width);
+  --expanded-tab-bar-width: 250px;
+  --collapsed-tab-bar-width: 45px;
 
-  /*Hide top workspace button*/
-   @media (-moz-bool-pref: "mod.autoexpand.hide_workspace_indicator") {
-    .zen-current-workspace-indicator {
-      display: none !important;
-    }
+  /*Hide current workspace*/
+  .zen-current-workspace-indicator {
+    display: none !important;
   }
 
   /*Makes scrolbar clickable*/
@@ -40,14 +36,12 @@
   }
 
   /*Moves selected essential tab to the first position, ensuring it's visible*/
-  @media (-moz-bool-pref: "mod.autoexpand.essential_align") {
-    #navigator-toolbox:not([zen-has-hover]) tab:is([zen-essential], [pinned]):is([selected]){
-      order: -1;
-      //grid-column: 1 !important;
-    }
+  #navigator-toolbox:not([zen-has-hover]) tab:is([zen-essential], [pinned]):is([selected]){
+    //order: -1; // Move it to the front without breaking layout
+    //grid-column: 1 !important;
   }
 
-/*Elements with "Instant" transitions. These are delayed dynamically depending on if it's hover/unhover, and are never animated to improve performance.*/
+  /*Elements with "Instant" transitions. These are delayed dynamically depending on if it's hover/unhover, and are never animated to improve performance.*/
   #zen-sidebar-foot-buttons > *:not(#zen-workspaces-button), #zen-media-controls-toolbar, #zen-appcontent-wrapper,
   vbox.zen-workspace-tabs-section.zen-workspace-pinned-tabs-section,
   #nav-bar, #tabs-newtab-button .toolbarbutton-text, tab:not([zen-essential]):not([pinned])[selected="true"] .tab-background,
